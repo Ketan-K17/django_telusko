@@ -46,7 +46,7 @@
                         <div class="row align-items-center">
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="index.html">
+                                    <a href="{% url 'index' %}">
                                         <img src="{% static 'img/logo.png' %}" alt="">
                                     </a>
                                 </div>
@@ -209,7 +209,7 @@
                             <img src="{% static 'img/destination/1.png' %}" alt="">
                         </div>
                         <div class="content">
-                            <p class="d-flex align-items-center">Italy <a href="travel_destination.html">  07 Places</a> </p>
+                            <p class="d-flex align-items-center">Italy <a href="{% url 'destination_details' %}">  07 Places</a> </p>
                             
                         </div>
                     </div>
@@ -220,7 +220,7 @@
                             <img src="{% static 'img/destination/2.png' %}" alt="">
                         </div>
                         <div class="content">
-                            <p class="d-flex align-items-center">Brazil <a href="travel_destination.html">  03 Places</a> </p>
+                            <p class="d-flex align-items-center">Brazil <a href="{% url 'destination_details' %}">  03 Places</a> </p>
                             
                         </div>
                     </div>
@@ -231,7 +231,7 @@
                             <img src="{% static 'img/destination/3.png' %}" alt="">
                         </div>
                         <div class="content">
-                            <p class="d-flex align-items-center">America <a href="travel_destination.html">  10 Places</a> </p>
+                            <p class="d-flex align-items-center">America <a href="{% url 'destination_details' %}">  10 Places</a> </p>
                             
                         </div>
                     </div>
@@ -242,7 +242,7 @@
                             <img src="{% static 'img/destination/4.png' %}" alt="">
                         </div>
                         <div class="content">
-                            <p class="d-flex align-items-center">Nepal <a href="travel_destination.html">  02 Places</a> </p>
+                            <p class="d-flex align-items-center">Nepal <a href="{% url 'destination_details' %}">  02 Places</a> </p>
                             
                         </div>
                     </div>
@@ -253,7 +253,7 @@
                             <img src="{% static 'img/destination/5.png' %}" alt="">
                         </div>
                         <div class="content">
-                            <p class="d-flex align-items-center">Maldives <a href="travel_destination.html">  02 Places</a> </p>
+                            <p class="d-flex align-items-center">Maldives <a href="{% url 'destination_details' %}">  02 Places</a> </p>
                             
                         </div>
                     </div>
@@ -264,7 +264,7 @@
                             <img src="{% static 'img/destination/6.png' %}" alt="">
                         </div>
                         <div class="content">
-                            <p class="d-flex align-items-center">Indonesia <a href="travel_destination.html">  05 Places</a> </p>
+                            <p class="d-flex align-items-center">Indonesia <a href="{% url 'destination_details' %}">  05 Places</a> </p>
                             
                         </div>
                     </div>
@@ -328,7 +328,7 @@
                             <a href="#" class="prise">$500</a>
                         </div>
                         <div class="place_info">
-                            <a href="destination_details.html"><h3>California</h3></a>
+                            <a href="{% url 'destination_details' %}"><h3>California</h3></a>
                             <p>United State of America</p>
                             <div class="rating_days d-flex justify-content-between">
                                 <span class="d-flex justify-content-center align-items-center">
@@ -354,7 +354,7 @@
                             <a href="#" class="prise">$500</a>
                         </div>
                         <div class="place_info">
-                            <a href="destination_details.html"><h3>Korola Megna</h3></a>
+                            <a href="{% url 'destination_details' %}"><h3>Korola Megna</h3></a>
                             <p>United State of America</p>
                             <div class="rating_days d-flex justify-content-between">
                                 <span class="d-flex justify-content-center align-items-center">
@@ -380,7 +380,7 @@
                             <a href="#" class="prise">$500</a>
                         </div>
                         <div class="place_info">
-                            <a href="destination_details.html"><h3>London</h3></a>
+                            <a href="{% url 'destination_details' %}"><h3>London</h3></a>
                             <p>United State of America</p>
                             <div class="rating_days d-flex justify-content-between">
                                 <span class="d-flex justify-content-center align-items-center">
@@ -406,7 +406,7 @@
                             <a href="#" class="prise">$500</a>
                         </div>
                         <div class="place_info">
-                            <a href="destination_details.html"><h3>Miami Beach</h3></a>
+                            <a href="{% url 'destination_details' %}"><h3>Miami Beach</h3></a>
                             <p>United State of America</p>
                             <div class="rating_days d-flex justify-content-between">
                                 <span class="d-flex justify-content-center align-items-center">
@@ -432,7 +432,7 @@
                             <a href="#" class="prise">$500</a>
                         </div>
                         <div class="place_info">
-                            <a href="destination_details.html"><h3>California</h3></a>
+                            <a href="{% url 'destination_details' %}"><h3>California</h3></a>
                             <p>United State of America</p>
                             <div class="rating_days d-flex justify-content-between">
                                 <span class="d-flex justify-content-center align-items-center">
@@ -458,7 +458,7 @@
                             <a href="#" class="prise">$500</a>
                         </div>
                         <div class="place_info">
-                            <a href="destination_details.html"><h3>Saintmartine Iceland</h3></a>
+                                    <a href="{% url 'destination_details' %}"><h3>Saintmartine Iceland</h3></a>
                             <p>United State of America</p>
                             <div class="rating_days d-flex justify-content-between">
                                 <span class="d-flex justify-content-center align-items-center">
@@ -805,7 +805,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   <div class="modal fade custom_search_pop" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
-        <div class="serch_form">
+        <div class="search_form">
             <input type="text" placeholder="Search" >
             <button type="submit">search</button>
         </div>

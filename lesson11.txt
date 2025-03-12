@@ -1,0 +1,16 @@
+1. It's all about having a bunch of static files in a 'static' folder, complete with all js, css, and html.
+
+2. the settings.py file of the project is then changed to make the project aware of these files
+
+3. after this, you're supposed to run 
+python manage.py collectstatic, to 'collect' the static files, into a new folder on the app level (say 'assets').
+
+note that this is all happening at the app level (i.e. under the project's base directory.)
+
+4. once this is done, you need to copy the html files you'll actually display, from the static folder to the templates folder, and tweak every single html file to use the css, js that was given in the static folder.
+
+you do this through that 'load static' code (it's slightly tedious since you need to do this for every href/src tag present in the html file.)
+
+5. once this is done, you can just run the project through
+
+python manage.py runserver.
