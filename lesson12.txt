@@ -1,0 +1,10 @@
+L12: Learned how to pass dynamic data from backend (through views) to frontend (present in templates), using a model from the models.py file
+
+
+The point of creating a model, atleast in this lecture, is to simplify the process of passing data from backend to frontend.
+
+instead of passing 24 distinct values of dest, img, price, etc for 6 locations, you can instead send 6 location model objects to the frontend. 
+
+Another point of a model, he pointed out, is that it is a blueprint for the database in the backend. 
+
+i.e. if i have a model called "Location", and i have 6 location objects, then i have 6 rows in my database, and each row has 3 columns : id, name, description. 
