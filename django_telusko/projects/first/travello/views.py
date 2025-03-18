@@ -1,9 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse 
+from .models import Destination
 # Create your views here.
 
+
 def index(request):
-    return render(request, 'index.html') 
+    dest1 = Destination()
+    dest1.id = 1
+    dest1.name = "Mumbai"
+    dest1.description = "The city that never sleeps"
+    dest1.image = "destination_1.jpg"
+    dest1.price = 700
+    return render(request, 'index.html', {'dest1': dest1}) 
 
 def about(request):
     return render(request, 'about.html')
