@@ -6,5 +6,6 @@ class Destination():
     description : str
     image : str
     price : int
+    special_offer : bool
     
  

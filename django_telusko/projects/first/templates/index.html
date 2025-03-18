@@ -41,6 +41,28 @@
       .single_destination .thumb {
         height: 250px;    /* Fixed container height */
         overflow: hidden; /* Hide overflow */
+        position: relative; /* Added for absolute positioning of badge */
+      }
+
+      .special-offer-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #FF4136;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-weight: bold;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        transform: rotate(5deg);
+        z-index: 10;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% { transform: rotate(5deg) scale(1); }
+        50% { transform: rotate(5deg) scale(1.1); }
+        100% { transform: rotate(5deg) scale(1); }
       }
     </style>
 </head>
@@ -221,6 +243,9 @@
                     <div class="single_destination">
                         <div class="thumb">
                             <img src="{{baseUrl}}/destination/{{dest.image}}" alt="{{dest.name}}" class="destination-image">
+                            {% if dest.special_offer %}
+                            <div class="special-offer-badge">Special Offer!</div>
+                            {% endif %}
                         </div>
                         <div class="content">
                             <p class="d-flex align-items-center">{{dest.name}} <a href="{% url 'destination_details' %}">  {{dest.price}}</a> </p>

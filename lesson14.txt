@@ -1,0 +1,1 @@
+Learnt how to use if statements in django templates.
