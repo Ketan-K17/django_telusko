@@ -1,0 +1,8 @@
+learnt further DTL syntax for creating dynamic content in 
+templates.
+
+here i learnt a for loop to iterate over a list of objects and display them in the template.
+
+I learnt how to use the baseUrl to store the static files in a separate folder and use it in the template.
+
+

@@ -1,4 +1,5 @@
 {% load static %}
+{% static "img" as baseUrl %}
 
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -30,6 +31,18 @@
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    <style>
+      .destination-image {
+        width: 100%;      /* Take full width of parent container */
+        height: 250px;    /* Fixed height for all images */
+        object-fit: cover; /* This is key - maintains aspect ratio while covering container */
+      }
+      
+      .single_destination .thumb {
+        height: 250px;    /* Fixed container height */
+        overflow: hidden; /* Hide overflow */
+      }
+    </style>
 </head>
 
 <body>
@@ -203,39 +216,18 @@
                 </div>
             </div>
             <div class="row">
+                {% for dest in dests %}
                 <div class="col-lg-4 col-md-6">
                     <div class="single_destination">
                         <div class="thumb">
-                            <img src="{% static 'img/destination/1.png' %}" alt="">
+                            <img src="{{baseUrl}}/destination/{{dest.image}}" alt="{{dest.name}}" class="destination-image">
                         </div>
                         <div class="content">
-                            <p class="d-flex align-items-center">{{dest1.name}} <a href="{% url 'destination_details' %}">  07 Places</a> </p>
-                            
+                            <p class="d-flex align-items-center">{{dest.name}} <a href="{% url 'destination_details' %}">  {{dest.price}}</a> </p>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_destination">
-                        <div class="thumb">
-                            <img src="{% static 'img/destination/2.png' %}" alt="">
-                        </div>
-                        <div class="content">
-                            <p class="d-flex align-items-center">Brazil <a href="{% url 'destination_details' %}">  03 Places</a> </p>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_destination">
-                        <div class="thumb">
-                            <img src="{% static 'img/destination/3.png' %}" alt="">
-                        </div>
-                        <div class="content">
-                            <p class="d-flex align-items-center">America <a href="{% url 'destination_details' %}">  10 Places</a> </p>
-                            
-                        </div>
-                    </div>
-                </div>
+                </div>  
+                {% endfor %}
             </div>
         </div>
     </div>
