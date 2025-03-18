@@ -1,0 +1,3 @@
+He explained the ORM (object relational mapping) in django.
+
+He said how models are like blueprints for the database tables, and that django automatically creates the table in the database according to the model we defined in models.py file.
