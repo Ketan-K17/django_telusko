@@ -1,0 +1,20 @@
+learnt how to create models, what fields they usually take, and how to migrate them to database.
+
+
+'migrating' models to database means that you're making the modifications in the models.py file reflect in the database schema.
+
+There's 2 commands that together achieve this- 
+
+1. python manage.py makemigrations
+ - This command creates a migration python file, which is a record of the changes you've made to the models.
+
+2. python manage.py migrate
+ - This command applies the migrations from the migration python file to the database.
+
+(You can view the sql commands that will be executed by the migrate command by using 'python manage.py sqlmigrate travello 0001'. Note that this makes no changes to the database, it just shows you the sql commands that will be executed.)
+
+
+the library 'psycopg2' is used to connect your django project to the postgres database.
+the library 'pillow' is used to handle image uploading (it is part of your 'destination' model)
+
+check out lesson 17's commit for more details on what all needs to be done to migrate the models to the database.
