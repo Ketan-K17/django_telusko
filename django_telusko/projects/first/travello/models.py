@@ -7,5 +7,6 @@ class Destination(models.Model):
     image = models.ImageField(upload_to='pics/')
     price = models.IntegerField()
     special_offer = models.BooleanField(default=False)
+    rating = models.FloatField(default=0.0)
     
  
