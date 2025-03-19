@@ -5,28 +5,7 @@ from .models import Destination
 
 
 def index(request):
-    dest1 = Destination()
-    dest1.name = "Mumbai"
-    dest1.description = "The city that never sleeps"
-    dest1.image = "mumbai.png"
-    dest1.price = 700
-    dest1.special_offer = True  
-
-    dest2 = Destination()
-    dest2.name = "Margao"
-    dest2.description = "The city that's always half-asleep."
-    dest2.image = "margao.png"
-    dest2.price = 500
-    dest2.special_offer = True  
-
-    dest3 = Destination()
-    dest3.name = "Panaji"
-    dest3.description = "capital of Goa."
-    dest3.image = "panaji.png"
-    dest3.price = 600
-    dest3.special_offer = True  
-
-    dests = [dest1, dest2, dest3]
+    dests = Destination.objects.all()
     return render(request, 'index.html', {'dests': dests}) 
 
 def about(request):

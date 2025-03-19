@@ -1,0 +1,1 @@
+understood how to put in data from the admin panel into the database, and how to reflect it into the frontend.
