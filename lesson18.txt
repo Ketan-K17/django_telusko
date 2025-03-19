@@ -1,0 +1,10 @@
+NOTE: use 'python manage.py help' to see all the commands available in django.
+
+
+I learnt how to make basic use of the admin panel, how to - 
+
+1. create a new admin user (python manage.py createsuperuser)
+2. register models in the admin panel (admin.site.register(Destination))
+
+
+
