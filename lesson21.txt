@@ -1,0 +1,9 @@
+A LOT was covered in this lesson. 
+
+We're basically working on user registration and login. 
+
+so i created a new app called accounts. 
+
+built a few views and templates in that, rn the views just render the templates. 
+
+I'm saying it seemed like a lot because I wasted time trying to get that navbar right with all the buttons on the same line. Didn't need to do it, but I did it anyway. 

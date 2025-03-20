@@ -64,6 +64,109 @@
         50% { transform: rotate(5deg) scale(1.1); }
         100% { transform: rotate(5deg) scale(1); }
       }
+      
+      /* Fix for navigation spacing */
+      #navigation {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-around;
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+        padding-left: 20px; /* Add space between logo and navigation */
+      }
+      
+      #navigation > li {
+        margin: 0;
+        padding: 0 6px;
+        white-space: nowrap;
+        flex: 0 0 auto;
+        display: inline-block;
+      }
+      
+      #navigation > li > a {
+        font-size: 13px;
+        padding: 4px 4px;
+        display: block;
+      }
+      
+      .main-menu {
+        width: 100%;
+      }
+      
+      /* Reduce navbar height */
+      .main-header-area {
+        padding: 5;
+        min-height: 80px;
+        max-height: 80px;
+        display: flex;
+        align-items: center;
+      }
+      
+      .main-header-area .logo img {
+        max-height: 25px;
+        width: auto;
+      }
+      
+      /* Fix social icons */
+      .social_links ul {
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .social_links ul li {
+        margin: 0 2px;
+        list-style: none;
+      }
+      
+      .social_links ul li a {
+        font-size: 12px;
+      }
+      
+      .social_wrap {
+        padding-left: 0;
+        justify-content: flex-end;
+      }
+      
+      .number p {
+        margin-bottom: 0;
+        font-size: 11px;
+        margin-right: 5px;
+        white-space: nowrap;
+      }
+      
+      .header_bottom_border {
+        padding: 0;
+      }
+      
+      /* Increase main menu width and adjust column spacing */
+      @media (min-width: 992px) {
+        .main-menu-container {
+          width: 60% !important; 
+          max-width: 60%;
+        }
+        .social-container {
+          width: 30% !important;
+          max-width: 30%;
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+      
+      .row.align-items-center {
+        min-height: 40px;
+        max-height: 40px;
+      }
+      
+      .social_wrap .number,
+      .social_wrap .social_links {
+        height: 40px;
+        display: flex;
+        align-items: center;
+      }
     </style>
 </head>
 
@@ -86,14 +189,14 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-xl-6 col-lg-6">
-                                <div class="main-menu  d-none d-lg-block">
+                            <div class="col-xl-6 col-lg-6 main-menu-container">
+                                <div class="main-menu d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
                                             <li><a class="active" href="{% url 'index' %}">home</a></li>
                                             <li><a href="{% url 'about' %}">About</a></li>
-                                            <li><a class="" href="{% url 'destination' %}">Destination</a>
-                                            </li>
+                                            <li><a href="{% url 'register' %}">Register</a></li>
+                                            <li><a href="{% url 'login' %}">Login</a></li>
                                             <li><a href="#">pages <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
                                                         <li><a href="{% url 'destination_details' %}">Destinations details</a></li>
@@ -111,10 +214,10 @@
                                     </nav>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-4 d-none d-lg-block">
+                            <div class="col-xl-4 col-lg-4 social-container">
                                 <div class="social_wrap d-flex align-items-center justify-content-end">
                                     <div class="number">
-                                            <p> <i class="fa fa-phone"></i> 10(256)-928 256</p>
+                                        <p> <i class="fa fa-phone"></i> 10(256)-928 256</p>
                                     </div>
                                     <div class="social_links d-none d-xl-block">
                                         <ul>
