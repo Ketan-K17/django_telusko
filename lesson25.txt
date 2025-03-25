@@ -1,0 +1,5 @@
+created a logout page as well.
+
+Also learnt how to conditionalise some components of html based on the user's authentication status.
+
+check the diff to see what code in the views helps to do that.

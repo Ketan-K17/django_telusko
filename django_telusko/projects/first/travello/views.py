@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse 
 from .models import Destination
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 
 
@@ -14,6 +16,7 @@ def about(request):
 def destination(request):
     return render(request, 'travel_destination.html')
 
+@login_required(login_url='/accounts/login')
 def destination_details(request):
     return render(request, 'destination_details.html')
 

@@ -195,8 +195,13 @@
                                         <ul id="navigation">
                                             <li><a class="active" href="{% url 'index' %}">home</a></li>
                                             <li><a href="{% url 'about' %}">About</a></li>
-                                            <li><a href="{% url 'register' %}">Register</a></li>
-                                            <li><a href="{% url 'login' %}">Login</a></li>
+                                            {% if user.is_authenticated %}  
+                                                <li><a href="{% url 'logout' %}">Logout</a></li>
+                                                <li><a href="#">{{ user.first_name }} {{ user.last_name }}</a></li>
+                                            {% else %}
+                                                <li><a href="{% url 'register' %}">Register</a></li>
+                                                <li><a href="{% url 'login' %}">Login</a></li>
+                                            {% endif %}
                                             <li><a href="#">pages <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
                                                         <li><a href="{% url 'destination_details' %}">Destinations details</a></li>
