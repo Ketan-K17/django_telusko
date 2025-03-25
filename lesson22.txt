@@ -1,0 +1,14 @@
+the 'action' attribute in the html form is the url that will be called when the form is submitted.
+
+the 'method' attribute in the html form is the method that will be used to send the form data to the server.
+
+I also learnt that there's a separate built-in model for users in django. It's called User. You don't need to create it manually, just use this.
+
+using the user's model, you can check if a user exists by using the filter method.
+
+User.objects.filter(username=user_name).exists()
+
+
+you may want to use this code in the views.py file to check if a user exists before creating a new user.
+
+
