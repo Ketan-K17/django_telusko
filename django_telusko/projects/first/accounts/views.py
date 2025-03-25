@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
-
+# this import statement is to show messages on the screen
+from django.contrib import messages
 # this is the user's model. You don't need to create it manually, just use this.
 from django.contrib.auth.models import User, auth
 
@@ -16,18 +17,22 @@ def register(request):
         
         if password == confirm_password:
             if User.objects.filter(username=user_name).exists():
-                print("Username already exists")
+                messages.info(request, "Username already exists")
+                # print("Username already exists")
                 return redirect('register')
             elif User.objects.filter(email=email).exists():
-                print("Email already exists")
+                messages.info(request, "Email already exists")
+                # print("Email already exists")
                 return redirect('register')
             else:
                 user = User.objects.create_user(first_name=first_name, last_name=last_name, username=user_name, email=email, password=password)
                 user.save()
-                print("User created")
+                messages.info(request, "User created")
+                # print("User created")
                 return redirect('login')
         else:
-            print("Passwords do not match")
+            messages.info(request, "Passwords do not match")
+            # print("Passwords do not match")
             return redirect('register')
     else:
         return render(request, 'register.html')

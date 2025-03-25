@@ -1,0 +1,1 @@
+learnt how to pass error messages such as username already exists, email already exists, passwords do not match, etc, from the views.py file to the templates/register.html file.
